@@ -238,7 +238,7 @@ let rightGuess = [];
 function update(e) {
   if (hasWon === false) {
     if (currentRow === 6) {
-      console.log("You lost!");
+      displayAlert(`You lost: ${word}`, 10);
     }
 
     if (currentRow < 6) {
@@ -288,6 +288,9 @@ function pop(array) {
 }
 
 function update_frame() {
+  if (currentRow === 6) {
+    displayAlert(`You lost: ${word}`, 10);
+  }
   console.log(currentRow);
   if (currentRow < 6) {
     for (var i = 0 + 5 * currentRow, len = 5 + 5 * currentRow; i < len; i++) {
