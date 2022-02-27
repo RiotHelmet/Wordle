@@ -2,8 +2,9 @@ document.addEventListener("keydown", write);
 
 let current_typing = [];
 let wordList = [
-  "mower";
-  "apple";
+  "fault",
+  "mower",
+  "apple",
   "wheat",
   "about",
   "above",
