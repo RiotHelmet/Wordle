@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #121213;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_box {
+  position: relative;
+  width: 350px;
+  height: 420px;
+  display: flex;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: white;
+}
+
+.wordle_box {
+  height: 62px;
+  width: 62px;
+  align-items: center;
+  justify-content: center;
+  border: solid #3a3a3c 2px;
+  display: flex;
+  transform-style: preserve-3d;
+}
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  z-index: 5;
+  transition: step-end 0.25s;
+}
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  z-index: 5;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+ul li {
+  margin: 2px;
+}
+
+.child {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(0.3em);
+  }
+  10%,
+  30%,
+  50% {
+    transform: translate(-0.1em);
+  }
+  70%,
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes bop {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(115%);
+  }
+  0% {
+    transform: scale(100%);
+  }
+}
+
+#Alert {
+  position: absolute;
+  width: 150px;
+  height: 75px;
+  background-color: white;
+  top: 140px;
+  border-radius: 5px;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes hide {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes win {
+  0% {
+    transform: translate(0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(0, -0.4em);
+  }
+  10%,
+  30%,
+  50% {
+    transform: translate0(0, 1em);
+  }
+  70%,
+  100% {
+    transform: translate(0);
+  }
+}
