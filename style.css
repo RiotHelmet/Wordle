@@ -169,7 +169,7 @@ ul li {
   height: 200px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 10vh;
 }
 
 #Enter {
@@ -189,16 +189,40 @@ ul li {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-}
-
-.key {
   font-family: inherit;
   font-size: 10px;
   border: none;
 }
 
+
 .row {
   display: flex;
   width: 500px;
   justify-content: center;
+}
+
+
+@media only screen and (max-width: 510px) {
+  #wordle {
+    display: none;
+  }
+  .keyboard {
+    width: 325px;
+    height: 150px;
+  }
+  .key {
+    width: 25px;
+    margin: 0 6px 0 0;
+    height: 40px;
+    background-color: #818384;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.row {
+  display: flex;
+  width: 325px;
+  justify-content: center;
+}
 }
